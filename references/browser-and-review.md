@@ -1,6 +1,12 @@
 # Browser Interaction and Human Review
 
-Use available browser capabilities to inspect and fill application pages while preserving human control of submission.
+Use Google Chrome to inspect and fill application pages while preserving human control of submission.
+
+## Mandatory Chrome start
+
+Open Google Chrome at the beginning of every application request, before analyzing a form or preparing a browser-based application. Inspect open tabs for the relevant company, role, and application page. When the user supplies a job URL, open it in Chrome; otherwise, use the relevant existing Chrome tab when one is available.
+
+Do not substitute another browser for application interaction. If Chrome cannot be opened or controlled, stop browser form work and report `CHROME ACCESS REQUIRED — NOT SUBMITTED`. Do not claim the application was prepared in a form. Offline document selection or answer drafting may continue only when the user asks for that limited work.
 
 ## Interaction boundary
 
