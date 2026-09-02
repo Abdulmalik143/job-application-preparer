@@ -14,11 +14,11 @@ Use this guide to maintain `APPLICATION_PROFILE.md`: a private, local record of 
 
 ## First run and storage
 
-When no profile exists, first inspect candidate sources. Then ask the user whether they want a private reusable profile maintained in the current workspace. Do not force a long setup wizard: collect only the generic answers required by the current form, plus any answers the user voluntarily supplies for future use.
+When no profile exists, first inspect candidate sources. At the beginning of an application-preparation workflow, create `APPLICATION_PROFILE.md` from `assets/application-profile-template.md` unless the user requests read-only work. Do not force a long setup wizard: prepopulate only high-confidence, non-sensitive facts with their sources, then collect only the generic answers required by the current form.
 
-With user approval, copy `assets/application-profile-template.md` to `APPLICATION_PROFILE.md` in the candidate workspace. If that workspace is a Git repository, keep the profile untracked. Prefer adding the exact filename to the local `.git/info/exclude` after user approval; do not silently modify a shared `.gitignore`.
+If the workspace is a Git repository, keep the profile untracked. Prefer adding the exact filename to the local `.git/info/exclude`; do not silently modify a shared `.gitignore`.
 
-Tell the user when a new reusable answer is saved. If they decline the profile, use their answer only for the current application and do not create a file.
+Tell the user when a new reusable answer is saved. If they ask not to maintain a profile, use their answer only for the current application and do not update the file.
 
 ## What belongs in the profile
 
@@ -53,7 +53,7 @@ When a new question appears:
 
 1. Read the wording and classify it as verified fact, derived answer, user decision, sensitive/legal, company-specific, or credential.
 2. Check the profile and candidate sources before asking the user.
-3. If the answer is genuinely reusable, ask once, state that it will be saved for future applications, and add it with a confirmation date and source.
+3. If the answer is genuinely reusable, ask once in chat, state that it will be saved for future applications, and add it with a confirmation date and source.
 4. If it is company-specific, time-sensitive, legal, sensitive without explicit storage permission, or a credential, use it only for the current application or leave it for review. Do not add it to the profile.
 
 ## Keeping it current

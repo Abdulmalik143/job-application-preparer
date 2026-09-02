@@ -13,7 +13,7 @@ Use this guide to maintain `EXPERIENCE_PROFILE.md`: a private, local record of t
 
 ## First run and maintenance
 
-When the user opts in, inspect their existing candidate sources before asking questions. Create the profile from `assets/experience-profile-template.md`, populate only supported records, and ask the user to verify ambiguous dates, employer names, job titles, or gaps.
+At the beginning of an application-preparation workflow, inspect existing candidate sources and create `EXPERIENCE_PROFILE.md` from `assets/experience-profile-template.md` unless the user requests read-only work. Populate only supported records, and ask the user in chat to verify ambiguous dates, employer names, job titles, or gaps.
 
 Add a new record when the user supplies a job, project, responsibility, achievement, or date that is useful across applications. Update a record when the user corrects it, retaining its original source and confirmation date. Never invent a responsibility, metric, employer, title, or date to complete a form.
 
@@ -35,6 +35,6 @@ Read the form label and instructions first.
 
 ## Privacy and update rules
 
-Keep this file local. If the workspace uses Git, add the exact filename to `.git/info/exclude` only after user approval; do not change a shared `.gitignore` automatically.
+Keep this file local. If the workspace uses Git, add the exact filename to `.git/info/exclude`; do not change a shared `.gitignore` automatically.
 
 When adding a new item, tell the user what was saved. Do not add company-specific motivations, referrals, relatives, legal acknowledgements, or application decisions; those are not work-history records.

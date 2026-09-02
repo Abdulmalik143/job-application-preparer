@@ -4,7 +4,7 @@ Classify each application field before populating it.
 
 ## Consult the reusable profile first
 
-Before asking for a field, read `APPLICATION_PROFILE.md` and `EXPERIENCE_PROFILE.md` when the user has opted into them. Use a confirmed, current entry only when the same answer is valid across unrelated employers and the field wording matches. Record the source as the appropriate profile and preserve any original-source link recorded there.
+Before asking for a field, read `APPLICATION_PROFILE.md` and `EXPERIENCE_PROFILE.md` when they are available. Use a confirmed, current entry only when the same answer is valid across unrelated employers and the field wording matches. Record the source as the appropriate profile and preserve any original-source link recorded there.
 
 Do not treat either profile as permission to fill company-specific, role-specific, time-sensitive, sensitive, or legal questions. For profile setup and updates, read [application-profile.md](application-profile.md) or [experience-profile.md](experience-profile.md).
 
@@ -49,6 +49,19 @@ Do not add any of the following to `APPLICATION_PROFILE.md`:
 - “How did you hear about us?”, “Why this company?”, and other company-specific prompts;
 - expected compensation, start date, availability, negotiation choices, and other application-time decisions;
 - applicant acknowledgements, terms acceptance, privacy consent, or declarations whose text may vary by employer.
+
+## Chat answer loop
+
+After inspecting the whole form or current step, group unresolved fields into one concise chat message. For each field, provide its exact label, whether it is required, the field type or available options, why it could not be answered from sources, and whether its answer may be saved for future applications.
+
+Wait for the user's reply before filling those fields. Map each answer only to the corresponding field; if the reply is ambiguous, ask a focused follow-up rather than guessing. Then:
+
+- write a reusable cross-employer fact to `APPLICATION_PROFILE.md` and report that it was saved;
+- write a confirmed job, project, responsibility, achievement, or date to `EXPERIENCE_PROFILE.md` and report that it was saved;
+- use a company-specific, time-sensitive, sensitive, legal, or acknowledgement answer only for the current application and do not save it;
+- return to Chrome and fill only the fields supported by the user's reply.
+
+Do not use chat answers to accept terms, attestations, or final submission actions. These remain under human control.
 
 ## Required but unsupported fields
 

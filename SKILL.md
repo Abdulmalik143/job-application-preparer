@@ -14,33 +14,33 @@ Prepare applications from evidence, leave unsupported decisions unresolved, and 
 - Never infer sensitive, demographic, legal, work-authorization, compensation, availability, relocation, or other personal-decision answers.
 - Do not modify, rename, move, delete, or create convenience copies of candidate documents unless the user explicitly asks.
 - Keep candidate data in the workspace and task context. Never copy it into this skill, its examples, or other public resources.
-- Inspect only files relevant to the application; do not search unrelated private material.
+- On first use, inventory every file in the task workspace. Read every readable candidate or professional file, but never inspect credentials, secrets, caches, dependency folders, or unrelated binary data merely because it exists.
 - Treat `APPLICATION_PROFILE.md` and `EXPERIENCE_PROFILE.md` as private, local candidate data. Never commit, upload, or include them in public repositories, prompts, examples, or summaries.
 - Never store passwords, password hints, recovery codes, one-time codes, or other authentication secrets in a reusable profile or any task artifact.
 
 ## Workflow
 
-1. Open Google Chrome at the start of every application request. Inspect its tabs for the relevant job posting or application, and open the supplied job URL when one is available. Do not substitute another browser for form interaction.
-2. Analyze the target job before choosing candidate materials. Capture the company, role, responsibilities, required and preferred qualifications, tools, seniority, location, employment type, and requested documents.
-3. Discover candidate evidence before asking questions. Search the current workspace, relevant attached files, and files the user intentionally provides. Read `CANDIDATE_CONTEXT.md` early when present, but verify material facts against original sources.
-4. Read `APPLICATION_PROFILE.md` and `EXPERIENCE_PROFILE.md` early when they exist. If either is missing, create it only after the user agrees to maintain the corresponding private reusable profile; collect the first small set of relevant entries without forcing a long setup wizard.
+1. Initialize the workspace before opening a browser. Recursively inventory the workspace, inspect readable candidate and professional files, and read existing `CANDIDATE_CONTEXT.md`, `APPLICATION_PROFILE.md`, and `EXPERIENCE_PROFILE.md` when present.
+2. On the first application-preparation run, create or refresh `CANDIDATE_CONTEXT.md` and create missing private `APPLICATION_PROFILE.md` and `EXPERIENCE_PROFILE.md` templates. Treat starting this workflow as permission to create these local files unless the user asks for read-only work. Prepopulate only high-confidence, non-sensitive facts or verified experience records; leave all sensitive and decision fields blank.
+3. Open Google Chrome after workspace initialization. Inspect its tabs for the relevant job posting or application, and open the supplied job URL when one is available. Do not substitute another browser for form interaction.
+4. Analyze the target job before choosing candidate materials. Capture the company, role, responsibilities, required and preferred qualifications, tools, seniority, location, employment type, and requested documents.
 5. Identify the professional profile or combination of profiles that best matches the job. Select the CV, portfolio, projects, experience records, and links based on content and relevance—not discovery order or filenames alone.
 6. Build a task-local application context: job identity, selected profile, chosen files, supported facts, reusable profile values, relevant experience records, conflicts, unknowns, and user decisions. Keep each application isolated.
-7. Inspect the entire form or current step before filling. Classify every field using [references/application-fields.md](references/application-fields.md) and check the reusable profile before asking the user.
+7. Inspect the entire form or current step before filling. Classify every field using [references/application-fields.md](references/application-fields.md) and check the reusable profiles before asking the user.
 8. Fill verified facts and evidence-grounded professional answers. Upload only clearly role-appropriate files. Leave unsupported or ambiguous fields unresolved.
-9. When the user supplies or confirms a new cross-employer form fact, add it to `APPLICATION_PROFILE.md` if they have opted into that profile. When they supply or confirm a job, project, responsibility, achievement, or employment date, add it to `EXPERIENCE_PROFILE.md` if they have opted into that profile. Never save company-specific answers, one-time decisions, acknowledgements, or credentials as reusable defaults.
+9. Batch unresolved fields into a concise chat question. After the user answers, map each answer to its exact form field, save only reusable facts or experience records to the appropriate local profile, and then fill the supported fields in Chrome.
 10. Review for factual consistency, correct profile and uploads, suspicious autofill, conflicts, unanswered required fields, and accidental cross-application content.
 11. Stop at the final review/submission boundary and report what is ready, unresolved, or blocked.
 
 ## Workspace routing
 
-Read [references/workspace-discovery.md](references/workspace-discovery.md) whenever candidate files must be located, classified, or indexed. It defines structured and unstructured workspace behavior, source authority, conflict handling, and the optional `CANDIDATE_CONTEXT.md` map.
+Read [references/workspace-discovery.md](references/workspace-discovery.md) whenever candidate files must be located, classified, or indexed. It defines first-run full-workspace inventory, source authority, conflict handling, and `CANDIDATE_CONTEXT.md` behavior.
 
 Use semantic evidence from paths and contents. Folder names are hints, never requirements. Discover all career tracks dynamically; do not assume a profession or fixed directory layout. Ask the user only when required information cannot be found or safely inferred and no useful work can continue without it.
 
 ## Reusable profiles
 
-Read [references/application-profile.md](references/application-profile.md) whenever collecting, using, or updating recurring application answers. It defines `APPLICATION_PROFILE.md`, including first-run consent, privacy, question classification, update rules, and the template to copy from `assets/application-profile-template.md`.
+Read [references/application-profile.md](references/application-profile.md) whenever collecting, using, or updating recurring application answers. It defines `APPLICATION_PROFILE.md`, including first-run setup, privacy, question classification, update rules, and the template to copy from `assets/application-profile-template.md`.
 
 Use this profile to avoid repeating generic form questions, not to bypass a user decision. It is an explicit user-provided source for common application data but never overrides conflicting original documents. Reconfirm time-sensitive values and leave company-specific, role-specific, and legal acknowledgements out of the reusable profile.
 
@@ -50,9 +50,13 @@ Use the experience profile to fill verified work-history sections. It stores job
 
 ## Browser routing
 
-Chrome is mandatory for every application request. Open it before any application analysis or form work, then read [references/browser-and-review.md](references/browser-and-review.md) before interacting with a page. If Chrome cannot be opened or controlled, report `CHROME ACCESS REQUIRED — NOT SUBMITTED`; do not use another browser or claim that browser form preparation is complete.
+Chrome is mandatory after workspace initialization and before any form work. Read [references/browser-and-review.md](references/browser-and-review.md) before interacting with a page. If Chrome cannot be opened or controlled, read [references/chrome-access.md](references/chrome-access.md), explain the appropriate setup path for the user's agent, and report `CHROME ACCESS REQUIRED — NOT SUBMITTED`; do not use another browser or claim that browser form preparation is complete.
 
 Never bypass CAPTCHAs, ambiguous consent, login barriers, or unexpected confirmations. Stop the affected application at a safe point and continue other independent applications when possible.
+
+## Unresolved-field chat loop
+
+Read [references/application-fields.md](references/application-fields.md) when a form contains unsupported fields. Ask for unresolved fields in chat as a concise batch, wait for the user's answers, and only then fill the corresponding browser fields. The reference defines what may be saved for future applications and what must remain application-specific.
 
 ## Completion criteria
 

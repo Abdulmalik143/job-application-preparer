@@ -11,12 +11,14 @@ Job applications are repetitive, but a candidate's story should not be. Job Appl
 ## ✨ What it does
 
 - 🔎 **Discovers candidate evidence** from resumes, portfolios, projects, and reusable answers in structured or unstructured workspaces.
+- 🧱 **Bootstraps the workspace** by creating a candidate map plus private application and work-history profiles on first use.
 - 🗂️ **Remembers common form answers locally** in a private application profile, so users do not repeat the same generic information for every application.
 - 💼 **Builds a reusable work-history profile** from verified experience, making employment sections faster to complete.
 - 🎯 **Matches the right profile** to the role, selecting the most relevant CV, portfolio, and project evidence.
 - ✍️ **Writes grounded answers** that are concise, role-specific, and supported by candidate sources.
 - 🧭 **Handles uncertainty honestly** by flagging conflicts, unknowns, sensitive questions, and personal decisions instead of guessing.
 - 🌐 **Starts in Chrome** and works with the user's current signed-in browser session, while always stopping before final submission.
+- 💬 **Asks only what is missing** in chat, then returns to the form with the user's answers.
 
 ## ⚡ Install
 

@@ -1,6 +1,6 @@
 # Workspace Discovery
 
-Use this guide to discover candidate evidence without imposing a folder structure or collecting unnecessary private data.
+Use this guide to discover candidate evidence from every relevant file in the task workspace without imposing a folder structure or collecting unnecessary private data.
 
 ## Source authority
 
@@ -14,9 +14,23 @@ Use practical confidence levels:
 
 Automatically fill factual fields primarily from high-confidence evidence. Use medium-confidence evidence only when the form context makes the interpretation safe. Do not use low-confidence facts without human review.
 
+## First-run workspace initialization
+
+At the first application-preparation run in a workspace, recursively inventory every file and folder. Classify each file as candidate-professional, profile data, irrelevant, unreadable, or excluded. For every readable candidate-professional file, inspect enough of its content to classify it and extract supported evidence; use the appropriate document, PDF, image, or text capability.
+
+Do not open credentials, secret files, browser profiles, caches, dependency folders, version-control internals, or unrelated binary data. Record excluded and unreadable files in `CANDIDATE_CONTEXT.md` by path and reason without copying their contents.
+
+Create or refresh all three local navigation and reuse files during this initialization:
+
+- `CANDIDATE_CONTEXT.md` - semantic workspace map; never duplicate personal values.
+- `APPLICATION_PROFILE.md` - private reusable generic application data.
+- `EXPERIENCE_PROFILE.md` - private reusable work history and projects.
+
+Starting an application-preparation workflow authorizes creation of these local files unless the user explicitly requests read-only work. Keep the two profile files untracked when the workspace uses Git. Prepopulate only high-confidence, non-sensitive values and verified experience records with their source paths; leave sensitive and decision fields blank.
+
 ## Discovery procedure
 
-1. Check relevant attachments and list likely workspace files recursively. Prioritize names and formats associated with CVs, resumes, profiles, portfolios, case studies, projects, experience, education, certifications, preferences, and reusable application answers.
+1. Use the first-run inventory when needed; otherwise rescan changed, added, or previously unclassified files. Prioritize candidate-professional files including CVs, resumes, profiles, portfolios, case studies, projects, experience, education, certifications, preferences, and reusable application answers.
 2. Read `CANDIDATE_CONTEXT.md` first if it exists. Confirm that referenced files still exist and verify important facts in original sources.
 3. Read `APPLICATION_PROFILE.md` and `EXPERIENCE_PROFILE.md` if the user has created them. Confirm their entries are current enough for the target application and do not use them to silently resolve a conflict with an original document.
 4. Inspect the contents of likely files using the appropriate document, PDF, image, or text capability. Do not classify on filename alone.
@@ -28,7 +42,7 @@ If the workspace is reasonably structured, respect it and use it directly. If it
 
 ## `CANDIDATE_CONTEXT.md`
 
-Create or update this file when a semantic map would materially help because the workspace is unstructured, partially structured, or difficult to navigate. Do not create it merely to restate one obvious CV. Keep paths relative to the workspace and preserve the existing structure.
+Create or update this file during first-run workspace initialization, then refresh it when relevant files change. Keep paths relative to the workspace and preserve the existing structure.
 
 The map should primarily contain source paths, classifications, brief summaries, profile associations, confidence, conflicts, unknowns, and navigation notes. Avoid copying full documents or PII values when a source reference is enough.
 
@@ -83,6 +97,10 @@ Unknown:
 ## Unknown or Unclassified Files
 
 - ./relative/file — <why classification is uncertain>
+
+## Excluded Files
+
+- ./relative/file — <excluded because it is a secret, cache, dependency, version-control internal, or unrelated binary>
 ```
 
 When updating an existing map, preserve still-valid user-authored notes and make only evidence-supported changes. Removed, renamed, or changed sources should be noted or corrected. Never turn the map into a new source of truth.
