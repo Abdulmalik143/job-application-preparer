@@ -19,14 +19,10 @@ Job applications are repetitive, but a candidate's story should not be. Job Appl
 ## ⚡ Install
 
 ```bash
-npx skills add Abdulmalik143/job-application-preparer --skill job-application-preparer
+npx skills add Abdulmalik143/job-application-preparer
 ```
 
-To install it for a specific supported agent, pass that agent's name to the CLI:
-
-```bash
-npx skills add Abdulmalik143/job-application-preparer --skill job-application-preparer --agent <agent-name>
-```
+> To target a specific agent, add `--agent <agent-name>`.
 
 ## 🧭 Use
 
