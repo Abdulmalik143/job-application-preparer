@@ -1,0 +1,4 @@
+interface:
+  display_name: "Job Application Preparer"
+  short_description: "Prepare evidence-grounded job applications"
+  default_prompt: "Use $job-application-preparer to prepare this job application for my review without submitting it."
