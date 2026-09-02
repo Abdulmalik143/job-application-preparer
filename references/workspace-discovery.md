@@ -4,7 +4,7 @@ Use this guide to discover candidate evidence from every relevant file in the ta
 
 ## Source authority
 
-Original candidate documents are authoritative. `CANDIDATE_CONTEXT.md` is only a navigation map. `APPLICATION_PROFILE.md` is an explicit, private user-provided source for recurring application answers, and `EXPERIENCE_PROFILE.md` is an explicit, private user-provided source for verified work history. A factual answer must be traceable to one or more original sources or a confirmed profile entry.
+Original candidate documents are authoritative. `CANDIDATE_CONTEXT.md` is only a navigation map. `APPLICATION_PROFILE.md` is an explicit, private user-provided source for recurring application answers, and `EXPERIENCE_PROFILE.md` is an explicit, private user-provided source for verified work history. `APPLICATION_TRACKER.md` records browser workflow state only and is never evidence for a candidate fact. A factual answer must be traceable to one or more original sources or a confirmed profile entry.
 
 Use practical confidence levels:
 
@@ -20,19 +20,20 @@ At the first application-preparation run in a workspace, recursively inventory e
 
 Do not open credentials, secret files, browser profiles, caches, dependency folders, version-control internals, or unrelated binary data. Record excluded and unreadable files in `CANDIDATE_CONTEXT.md` by path and reason without copying their contents.
 
-Create or refresh all three local navigation and reuse files during this initialization:
+Create or refresh the local navigation, reuse, and continuity files during this initialization:
 
 - `CANDIDATE_CONTEXT.md` - semantic workspace map; never duplicate personal values.
 - `APPLICATION_PROFILE.md` - private reusable generic application data.
 - `EXPERIENCE_PROFILE.md` - private reusable work history and projects.
+- `APPLICATION_TRACKER.md` - private state for open, paused, and ready-for-review applications; never store field values or authentication data here.
 
-Starting an application-preparation workflow authorizes creation of these local files unless the user explicitly requests read-only work. Keep the two profile files untracked when the workspace uses Git. Prepopulate only high-confidence, non-sensitive values and verified experience records with their source paths; leave sensitive and decision fields blank.
+Starting an application-preparation workflow authorizes creation of these local files unless the user explicitly requests read-only work. Keep the three private files untracked when the workspace uses Git. Prepopulate only high-confidence, non-sensitive values and verified experience records with their source paths; leave sensitive and decision fields blank.
 
 ## Discovery procedure
 
 1. Use the first-run inventory when needed; otherwise rescan changed, added, or previously unclassified files. Prioritize candidate-professional files including CVs, resumes, profiles, portfolios, case studies, projects, experience, education, certifications, preferences, and reusable application answers.
 2. Read `CANDIDATE_CONTEXT.md` first if it exists. Confirm that referenced files still exist and verify important facts in original sources.
-3. Read `APPLICATION_PROFILE.md` and `EXPERIENCE_PROFILE.md` if the user has created them. Confirm their entries are current enough for the target application and do not use them to silently resolve a conflict with an original document.
+3. Read `APPLICATION_PROFILE.md`, `EXPERIENCE_PROFILE.md`, and `APPLICATION_TRACKER.md` if the user has created them. Confirm profile entries are current enough for the target application and do not use them to silently resolve a conflict with an original document. Use the tracker only to resume or report the browser workflow.
 4. Inspect the contents of likely files using the appropriate document, PDF, image, or text capability. Do not classify on filename alone.
 5. Distinguish shared facts from role-specific material based on evidence, not a predetermined schema.
 6. Detect professional profiles from recurring roles, skills, projects, documents, and portfolio evidence. Allow overlap only when it is genuinely relevant to the target job.
@@ -111,4 +112,4 @@ For a conflict, name the fact, each source, each differing value only when neces
 
 Do not inspect unrelated private files, export candidate data outside the task, or duplicate sensitive values across the index. User-provided application preferences are evidence only for the scope in which they were intentionally provided.
 
-`APPLICATION_PROFILE.md` and `EXPERIENCE_PROFILE.md` are separate from this map. They may contain user-entered reusable form data and verified work history, respectively, and must remain private and untracked; never copy their values into `CANDIDATE_CONTEXT.md`.
+`APPLICATION_PROFILE.md`, `EXPERIENCE_PROFILE.md`, and `APPLICATION_TRACKER.md` are separate from this map. They may contain user-entered reusable form data, verified work history, and application workflow state, respectively, and must remain private and untracked; never copy their values or browser state into `CANDIDATE_CONTEXT.md`.

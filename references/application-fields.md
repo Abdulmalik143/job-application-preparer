@@ -52,14 +52,15 @@ Do not add any of the following to `APPLICATION_PROFILE.md`:
 
 ## Chat answer loop
 
-After inspecting the whole form or current step, group unresolved fields into one concise chat message. For each field, provide its exact label, whether it is required, the field type or available options, why it could not be answered from sources, and whether its answer may be saved for future applications.
+After inspecting the whole form or current step, group unresolved fields into one concise chat message. Before asking, update `APPLICATION_TRACKER.md` with `PAUSED — USER INPUT NEEDED`, the current page and stage, each exact label, whether it is required, the field type or available options, why it could not be answered from sources, whether its answer may be saved for future applications, and the next safe action. Keep the designated Chrome tab or popup open.
 
 Wait for the user's reply before filling those fields. Map each answer only to the corresponding field; if the reply is ambiguous, ask a focused follow-up rather than guessing. Then:
 
 - write a reusable cross-employer fact to `APPLICATION_PROFILE.md` and report that it was saved;
 - write a confirmed job, project, responsibility, achievement, or date to `EXPERIENCE_PROFILE.md` and report that it was saved;
 - use a company-specific, time-sensitive, sensitive, legal, or acknowledgement answer only for the current application and do not save it;
-- return to Chrome and fill only the fields supported by the user's reply.
+- return to the same Chrome tab or popup and fill only the fields supported by the user's reply;
+- update the tracker with the resumed stage and any remaining unanswered fields.
 
 Do not use chat answers to accept terms, attestations, or final submission actions. These remain under human control.
 

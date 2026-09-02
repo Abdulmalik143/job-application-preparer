@@ -8,7 +8,7 @@ Open or attach to the current Chrome session, inspect its tabs, and use the tab 
 
 ## When Chrome cannot be opened or controlled
 
-Do not continue browser form work. Report `CHROME ACCESS REQUIRED — NOT SUBMITTED`, name the capability that is missing, and give the user the setup path appropriate to their agent. Do not invent menu labels or setup steps that are not visible in the current environment.
+Do not continue browser form work. Preserve any existing Chrome pages, update `APPLICATION_TRACKER.md` with the last known URL, stage, and recovery step, then report `CHROME ACCESS REQUIRED — NOT SUBMITTED`. Name the capability that is missing and give the user the setup path appropriate to their agent. Do not invent menu labels or setup steps that are not visible in the current environment.
 
 - **Codex:** Ask the user to make its Chrome-control or browser-control capability available in the active Codex environment, then open Chrome with the desired signed-in profile and retry.
 - **Claude or Cursor:** Ask the user to enable or connect a Chrome-capable browser automation integration supported by that agent, such as its native browser feature or a configured browser-control MCP. Then open Chrome with the desired signed-in profile and retry.
