@@ -11,10 +11,11 @@ Job applications are repetitive, but a candidate's story should not be. Job Appl
 ## ✨ What it does
 
 - 🔎 **Discovers candidate evidence** from resumes, portfolios, projects, and reusable answers in structured or unstructured workspaces.
+- 🗂️ **Remembers common form answers locally** in a private application profile, so users do not repeat the same generic information for every application.
 - 🎯 **Matches the right profile** to the role, selecting the most relevant CV, portfolio, and project evidence.
 - ✍️ **Writes grounded answers** that are concise, role-specific, and supported by candidate sources.
 - 🧭 **Handles uncertainty honestly** by flagging conflicts, unknowns, sensitive questions, and personal decisions instead of guessing.
-- 🌐 **Works with browser forms** when capabilities are available, while always stopping before final submission.
+- 🌐 **Starts in Chrome** and works with the user's current signed-in browser session, while always stopping before final submission.
 
 ## ⚡ Install
 
@@ -37,6 +38,7 @@ Use $job-application-preparer to prepare this job application for my review with
 - 📂 Candidate information is discovered from the workspace or files the user explicitly provides; it is never hardcoded into the skill.
 - 🔗 Every factual answer must be traceable to candidate evidence.
 - 🧩 Unsupported, conflicting, sensitive, and user-decision fields remain unresolved for human review.
+- 🔒 Passwords, verification codes, employer-specific answers, and legal acknowledgements are never saved as reusable profile data.
 - 🚫 The skill never submits, sends, confirms, or otherwise finalizes a job application.
 
 ## 👋 Built by Abdulmalik Alhindi

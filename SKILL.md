@@ -1,6 +1,6 @@
 ---
 name: job-application-preparer
-description: Prepare one or more job applications from candidate evidence found in the current workspace or user-provided files, including role matching, document selection, grounded written answers, and mandatory Chrome browser form filling. Use when the user asks to prepare or fill an application, apply for a role, or leave applications ready for review. Never submit an application.
+description: Prepare one or more job applications from candidate evidence found in the current workspace or user-provided files, including role matching, reusable application profiles, grounded written answers, and mandatory Chrome browser form filling. Use when the user asks to prepare or fill an application, apply for a role, or leave applications ready for review. Never submit an application.
 ---
 
 # Job Application Preparer
@@ -15,24 +15,34 @@ Prepare applications from evidence, leave unsupported decisions unresolved, and 
 - Do not modify, rename, move, delete, or create convenience copies of candidate documents unless the user explicitly asks.
 - Keep candidate data in the workspace and task context. Never copy it into this skill, its examples, or other public resources.
 - Inspect only files relevant to the application; do not search unrelated private material.
+- Treat `APPLICATION_PROFILE.md` as private, local candidate data. Never commit, upload, or include it in public repositories, prompts, examples, or summaries.
+- Never store passwords, password hints, recovery codes, one-time codes, or other authentication secrets in `APPLICATION_PROFILE.md` or any task artifact.
 
 ## Workflow
 
 1. Open Google Chrome at the start of every application request. Inspect its tabs for the relevant job posting or application, and open the supplied job URL when one is available. Do not substitute another browser for form interaction.
 2. Analyze the target job before choosing candidate materials. Capture the company, role, responsibilities, required and preferred qualifications, tools, seniority, location, employment type, and requested documents.
 3. Discover candidate evidence before asking questions. Search the current workspace, relevant attached files, and files the user intentionally provides. Read `CANDIDATE_CONTEXT.md` early when present, but verify material facts against original sources.
-4. Identify the professional profile or combination of profiles that best matches the job. Select the CV, portfolio, projects, experience, and links based on content and relevance—not discovery order or filenames alone.
-5. Build a task-local application context: job identity, selected profile, chosen files, supported facts, relevant evidence, reusable answers, conflicts, unknowns, and user decisions. Keep each application isolated.
-6. Inspect the entire form or current step before filling. Classify every field using [references/application-fields.md](references/application-fields.md).
-7. Fill verified facts and evidence-grounded professional answers. Upload only clearly role-appropriate files. Leave unsupported or ambiguous fields unresolved.
-8. Review for factual consistency, correct profile and uploads, suspicious autofill, conflicts, unanswered required fields, and accidental cross-application content.
-9. Stop at the final review/submission boundary and report what is ready, unresolved, or blocked.
+4. Read `APPLICATION_PROFILE.md` early when it exists. If it does not exist, create it only after the user agrees to maintain a local reusable profile; collect the first small set of reusable answers without forcing a long setup wizard.
+5. Identify the professional profile or combination of profiles that best matches the job. Select the CV, portfolio, projects, experience, and links based on content and relevance—not discovery order or filenames alone.
+6. Build a task-local application context: job identity, selected profile, chosen files, supported facts, reusable profile values, relevant evidence, conflicts, unknowns, and user decisions. Keep each application isolated.
+7. Inspect the entire form or current step before filling. Classify every field using [references/application-fields.md](references/application-fields.md) and check the reusable profile before asking the user.
+8. Fill verified facts and evidence-grounded professional answers. Upload only clearly role-appropriate files. Leave unsupported or ambiguous fields unresolved.
+9. When the user answers a new field, add it to `APPLICATION_PROFILE.md` only if it is a reusable, cross-employer fact or answer and the user has opted into the profile. Never save company-specific answers, one-time decisions, acknowledgements, or credentials.
+10. Review for factual consistency, correct profile and uploads, suspicious autofill, conflicts, unanswered required fields, and accidental cross-application content.
+11. Stop at the final review/submission boundary and report what is ready, unresolved, or blocked.
 
 ## Workspace routing
 
 Read [references/workspace-discovery.md](references/workspace-discovery.md) whenever candidate files must be located, classified, or indexed. It defines structured and unstructured workspace behavior, source authority, conflict handling, and the optional `CANDIDATE_CONTEXT.md` map.
 
 Use semantic evidence from paths and contents. Folder names are hints, never requirements. Discover all career tracks dynamically; do not assume a profession or fixed directory layout. Ask the user only when required information cannot be found or safely inferred and no useful work can continue without it.
+
+## Reusable application profile
+
+Read [references/application-profile.md](references/application-profile.md) whenever collecting, using, or updating recurring application answers. It defines `APPLICATION_PROFILE.md`, including first-run consent, privacy, question classification, update rules, and the template to copy from `assets/application-profile-template.md`.
+
+Use this profile to avoid repeating generic form questions, not to bypass a user decision. It is an explicit user-provided source for common application data but never overrides conflicting original documents. Reconfirm time-sensitive values and leave company-specific, role-specific, and legal acknowledgements out of the reusable profile.
 
 ## Browser routing
 

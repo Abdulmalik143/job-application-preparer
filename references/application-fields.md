@@ -2,11 +2,17 @@
 
 Classify each application field before populating it.
 
+## Consult the reusable profile first
+
+Before asking for a field, read `APPLICATION_PROFILE.md` when the user has opted into one. Use a confirmed, current entry only when the same answer is valid across unrelated employers and the field wording matches. Record the source as the application profile and preserve any original-source link recorded there.
+
+Do not treat the profile as permission to fill company-specific, role-specific, time-sensitive, sensitive, or legal questions. For profile setup and updates, read [application-profile.md](application-profile.md).
+
 ## A — Verified fact
 
 Examples include name, contact details, education, known job titles and dates, portfolio links, and explicitly evidenced skills.
 
-Fill when a reliable candidate source supports the exact value and no unresolved conflict applies. Retain the source association in task context.
+Fill when a reliable candidate source or a confirmed reusable profile entry supports the exact value and no unresolved conflict applies. Retain the source association in task context.
 
 ## B — Derived professional answer
 
@@ -20,13 +26,23 @@ Company-specific answers must be generated independently for each employer. Do n
 
 Examples include expected or current compensation, availability, notice period, relocation, preferred work arrangement, negotiation choices, and personal commitments.
 
-Leave unanswered unless candidate files contain an explicit, current, intentionally reusable answer for that purpose. Do not derive a choice from location, work history, or job interest.
+Leave unanswered unless the user makes an explicit decision for the current application. Do not auto-fill a past answer from the reusable profile, and do not derive a choice from location, work history, or job interest.
 
 ## D — Sensitive, legal, or demographic
 
 Examples include race, ethnicity, religion, gender, disability, medical or veteran status, criminal history, government identifiers, work authorization, legal declarations, and consent attestations.
 
-Never infer. Use only information explicitly and intentionally provided for the exact purpose. Otherwise leave unanswered and flag for human review. Never make a declaration or consent choice on the user's behalf when its meaning or authorization is unclear.
+Never infer. Use only information explicitly and intentionally provided for the exact purpose. Otherwise leave unanswered and flag for human review. A user may explicitly choose to keep a value locally in the profile for a repeated, identical question, but it remains sensitive and must be reviewed before use. Never make a declaration or consent choice on the user's behalf when its meaning or authorization is unclear.
+
+## Never save as a reusable answer
+
+Do not add any of the following to `APPLICATION_PROFILE.md`:
+
+- passwords, password confirmation values, MFA codes, recovery codes, or credentials;
+- employer-specific history, referrals, relatives, conflicts, or supplier relationships;
+- “How did you hear about us?”, “Why this company?”, and other company-specific prompts;
+- expected compensation, start date, availability, negotiation choices, and other application-time decisions;
+- applicant acknowledgements, terms acceptance, privacy consent, or declarations whose text may vary by employer.
 
 ## Required but unsupported fields
 
