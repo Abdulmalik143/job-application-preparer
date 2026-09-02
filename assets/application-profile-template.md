@@ -38,6 +38,8 @@ Last reviewed: <YYYY-MM-DD>
 - Default CV path or source:
 - Confirmed on: <YYYY-MM-DD>
 
+> Employment history, responsibilities, achievements, and projects belong in `EXPERIENCE_PROFILE.md`.
+
 ## Reusable Form Answers
 
 | Field or question meaning | Confirmed answer | Scope | Confirmed on | Source |
@@ -65,7 +67,7 @@ Last reviewed: <YYYY-MM-DD>
 ## Never Store Here
 
 - Passwords, password confirmation values, MFA codes, recovery codes, or credentials
-- Company-specific history, referrals, relatives, conflicts, or supplier relationships
+- One-off company relationship, referral, relative, conflict, or supplier answers
 - How a user heard about a specific company or role
 - Company-specific motivation answers
 - Terms acceptance, privacy consent, applicant acknowledgements, or legal attestations

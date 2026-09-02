@@ -4,10 +4,11 @@ Use this guide to maintain `APPLICATION_PROFILE.md`: a private, local record of 
 
 ## Purpose and authority
 
-`APPLICATION_PROFILE.md` is not a CV, portfolio, or replacement for `CANDIDATE_CONTEXT.md`.
+`APPLICATION_PROFILE.md` is not a CV, portfolio, work-history file, or replacement for `CANDIDATE_CONTEXT.md`.
 
 - It holds user-confirmed answers to recurring application fields.
 - It is a private operational source, not a public skill resource.
+- Employment history, responsibilities, achievements, and project records belong in `EXPERIENCE_PROFILE.md`.
 - Original candidate documents remain authoritative for career history, education, skills, projects, and role-specific evidence.
 - When an original source conflicts with the profile, do not decide silently; flag the conflict for the user.
 
@@ -28,11 +29,11 @@ Save an answer only when all of the following are true:
 3. It does not require a decision for this particular role, company, country, or date.
 4. It is not a credential, acknowledgement, or prohibited sensitive value.
 
-Common reusable entries include contact details, exact English name spelling, general address and residence details, education, stable professional links, and a preferred generic CV location. Record a source or confirmation date for each entry so stale information can be reviewed.
+Common reusable entries include contact details, exact English name spelling, general address and residence details, education, stable professional links, and a preferred generic CV location. Record a source or confirmation date for each entry so stale information can be reviewed. Store employment history in `EXPERIENCE_PROFILE.md`, not here.
 
 ## Questions that must not become defaults
 
-Never save company-specific questions or answers, including prior employment at that company, referral details, relatives or friends connected to that company or its suppliers, “How did you hear about us?”, and “Why do you want to work here?”.
+Never save company-specific questions or answers, including referral details, relatives or friends connected to that company or its suppliers, “How did you hear about us?”, and “Why do you want to work here?”. Store verified prior jobs in `EXPERIENCE_PROFILE.md`; do not store a one-off yes/no answer to “Have you worked here before?”.
 
 Never save or auto-fill expected salary, current salary, start date, availability, notice period, relocation, work arrangement, or negotiation choices. These are application-time decisions, even when a prior answer exists.
 

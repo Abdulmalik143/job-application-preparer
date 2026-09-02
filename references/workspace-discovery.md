@@ -4,7 +4,7 @@ Use this guide to discover candidate evidence without imposing a folder structur
 
 ## Source authority
 
-Original candidate documents are authoritative. `CANDIDATE_CONTEXT.md` is only a navigation map. `APPLICATION_PROFILE.md` is an explicit, private user-provided source for recurring application answers. A factual answer must be traceable to one or more original sources or a confirmed application-profile entry.
+Original candidate documents are authoritative. `CANDIDATE_CONTEXT.md` is only a navigation map. `APPLICATION_PROFILE.md` is an explicit, private user-provided source for recurring application answers, and `EXPERIENCE_PROFILE.md` is an explicit, private user-provided source for verified work history. A factual answer must be traceable to one or more original sources or a confirmed profile entry.
 
 Use practical confidence levels:
 
@@ -18,7 +18,7 @@ Automatically fill factual fields primarily from high-confidence evidence. Use m
 
 1. Check relevant attachments and list likely workspace files recursively. Prioritize names and formats associated with CVs, resumes, profiles, portfolios, case studies, projects, experience, education, certifications, preferences, and reusable application answers.
 2. Read `CANDIDATE_CONTEXT.md` first if it exists. Confirm that referenced files still exist and verify important facts in original sources.
-3. Read `APPLICATION_PROFILE.md` if the user has created one. Confirm its entries are current enough for the target application and do not use it to silently resolve a conflict with an original document.
+3. Read `APPLICATION_PROFILE.md` and `EXPERIENCE_PROFILE.md` if the user has created them. Confirm their entries are current enough for the target application and do not use them to silently resolve a conflict with an original document.
 4. Inspect the contents of likely files using the appropriate document, PDF, image, or text capability. Do not classify on filename alone.
 5. Distinguish shared facts from role-specific material based on evidence, not a predetermined schema.
 6. Detect professional profiles from recurring roles, skills, projects, documents, and portfolio evidence. Allow overlap only when it is genuinely relevant to the target job.
@@ -93,4 +93,4 @@ For a conflict, name the fact, each source, each differing value only when neces
 
 Do not inspect unrelated private files, export candidate data outside the task, or duplicate sensitive values across the index. User-provided application preferences are evidence only for the scope in which they were intentionally provided.
 
-`APPLICATION_PROFILE.md` is separate from this map. It may contain user-entered reusable form data and must remain private and untracked; never copy its values into `CANDIDATE_CONTEXT.md`.
+`APPLICATION_PROFILE.md` and `EXPERIENCE_PROFILE.md` are separate from this map. They may contain user-entered reusable form data and verified work history, respectively, and must remain private and untracked; never copy their values into `CANDIDATE_CONTEXT.md`.

@@ -4,15 +4,21 @@ Classify each application field before populating it.
 
 ## Consult the reusable profile first
 
-Before asking for a field, read `APPLICATION_PROFILE.md` when the user has opted into one. Use a confirmed, current entry only when the same answer is valid across unrelated employers and the field wording matches. Record the source as the application profile and preserve any original-source link recorded there.
+Before asking for a field, read `APPLICATION_PROFILE.md` and `EXPERIENCE_PROFILE.md` when the user has opted into them. Use a confirmed, current entry only when the same answer is valid across unrelated employers and the field wording matches. Record the source as the appropriate profile and preserve any original-source link recorded there.
 
-Do not treat the profile as permission to fill company-specific, role-specific, time-sensitive, sensitive, or legal questions. For profile setup and updates, read [application-profile.md](application-profile.md).
+Do not treat either profile as permission to fill company-specific, role-specific, time-sensitive, sensitive, or legal questions. For profile setup and updates, read [application-profile.md](application-profile.md) or [experience-profile.md](experience-profile.md).
 
 ## A — Verified fact
 
-Examples include name, contact details, education, known job titles and dates, portfolio links, and explicitly evidenced skills.
+Examples include name, contact details, education, known job titles and dates, employment history, portfolio links, and explicitly evidenced skills.
 
-Fill when a reliable candidate source or a confirmed reusable profile entry supports the exact value and no unresolved conflict applies. Retain the source association in task context.
+Fill when a reliable candidate source, a confirmed application-profile entry, or a confirmed experience-profile record supports the exact value and no unresolved conflict applies. Retain the source association in task context.
+
+## Work-history sections
+
+Use `EXPERIENCE_PROFILE.md` to fill employment-history sections. If the form requests complete work history, enter every verified record in chronological order. If it asks for relevant experience, select only records that support the target role.
+
+For “Have you worked for <company> before?” or a similar question, an exact verified employer match supports `Yes`. A missing match does not support `No` unless the user confirms their profile contains their complete employment history. Do not treat similarly named subsidiaries or companies as an exact match without user review.
 
 ## B — Derived professional answer
 
@@ -39,7 +45,7 @@ Never infer. Use only information explicitly and intentionally provided for the 
 Do not add any of the following to `APPLICATION_PROFILE.md`:
 
 - passwords, password confirmation values, MFA codes, recovery codes, or credentials;
-- employer-specific history, referrals, relatives, conflicts, or supplier relationships;
+- one-off employer relationship, referral, relative, conflict, or supplier answers; store verified work history in `EXPERIENCE_PROFILE.md` instead;
 - “How did you hear about us?”, “Why this company?”, and other company-specific prompts;
 - expected compensation, start date, availability, negotiation choices, and other application-time decisions;
 - applicant acknowledgements, terms acceptance, privacy consent, or declarations whose text may vary by employer.
