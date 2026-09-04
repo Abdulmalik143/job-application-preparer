@@ -1,12 +1,12 @@
 # Application Tracker and Recovery
 
-Use `APPLICATION_TRACKER.md` as a private, local continuity log for browser-based applications. It prevents a paused or interrupted application from becoming an unexplained lost tab.
+Use `job-application-preparer/APPLICATION_TRACKER.md` as a private, local continuity log for browser-based applications. It prevents a paused or interrupted application from becoming an unexplained lost tab.
 
 ## Purpose and limits
 
 The tracker records the state of each application, not candidate evidence or form answers. It must not contain passwords, authentication codes, government identifiers, exact sensitive values, or a copy of the completed form.
 
-Create it from `assets/application-tracker-template.md` on the first application-preparation run unless the user requests read-only work. Keep it untracked in Git by adding its exact filename to the local `.git/info/exclude`; do not modify a shared `.gitignore` automatically.
+Create it from `assets/application-tracker-template.md` on the first run unless the user requests read-only work. Keep the whole managed `job-application-preparer/` directory untracked in Git by adding it to local `.git/info/exclude`; do not modify a shared `.gitignore` automatically.
 
 ## One record per application
 

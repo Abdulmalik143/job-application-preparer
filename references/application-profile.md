@@ -1,6 +1,6 @@
 # Reusable Application Profile
 
-Use this guide to maintain `APPLICATION_PROFILE.md`: a private, local record of generic application answers the user wants to reuse. It reduces repeated form entry without turning company-specific or personal decisions into defaults.
+Use this guide to maintain `job-application-preparer/APPLICATION_PROFILE.md`: a private, local record of generic application answers the user wants to reuse. It reduces repeated form entry without turning company-specific or personal decisions into defaults.
 
 ## Purpose and authority
 
@@ -14,9 +14,9 @@ Use this guide to maintain `APPLICATION_PROFILE.md`: a private, local record of 
 
 ## First run and storage
 
-When no profile exists, first inspect candidate sources. At the beginning of an application-preparation workflow, create `APPLICATION_PROFILE.md` from `assets/application-profile-template.md` unless the user requests read-only work. Do not force a long setup wizard: prepopulate only high-confidence, non-sensitive facts with their sources, then collect only the generic answers required by the current form.
+When no profile exists, first inspect candidate sources. At the beginning of the workflow, create the managed `APPLICATION_PROFILE.md` from `assets/application-profile-template.md` unless the user requests read-only work. Do not force a long setup wizard: prepopulate only high-confidence, non-sensitive facts with their sources, then collect only the generic answers required by the current form.
 
-If the workspace is a Git repository, keep the profile untracked. Prefer adding the exact filename to the local `.git/info/exclude`; do not silently modify a shared `.gitignore`.
+If the workspace is a Git repository, keep the entire managed `job-application-preparer/` directory untracked by adding that exact directory to local `.git/info/exclude`; do not silently modify a shared `.gitignore`.
 
 Tell the user when a new reusable answer is saved. If they ask not to maintain a profile, use their answer only for the current application and do not update the file.
 

@@ -1,52 +1,54 @@
 # Career-Track File Organization
 
-Use this layout only when the user explicitly asks to organize their professional files and approves a career-track structure. It is an approved preset for candidates whose work spans Front-End Development, Product Design, and Visual Identity; do not impose these tracks on a candidate whose sources or instructions do not support them.
+Organize candidate-professional files automatically during workspace initialization, inside the managed `job-application-preparer/Career/` directory. This isolates the skill's work from unrelated files in the task workspace.
 
 ## Approved layout
 
 ```text
-Career/
-├── Frontend-Development/
-│   ├── CV/
-│   ├── Projects/
-│   └── Certificates/
-├── Product-Design/
-│   ├── CV/
-│   ├── Case-Studies/
-│   ├── Portfolio/
-│   └── Certificates/
-├── Visual-Identity/
-│   ├── Projects/
-│   ├── Portfolio/
-│   └── Case-Studies/
-├── Shared/
-│   ├── Contact/
-│   ├── Education/
-│   ├── Certificates/
-│   └── Professional-Links/
-├── Unsorted/
-└── Archive/
+job-application-preparer/
+└── Career/
+    ├── Frontend-Development/
+    │   ├── CV/
+    │   ├── Projects/
+    │   └── Certificates/
+    ├── Product-Design/
+    │   ├── CV/
+    │   ├── Case-Studies/
+    │   ├── Portfolio/
+    │   └── Certificates/
+    ├── Visual-Identity/
+    │   ├── Projects/
+    │   ├── Portfolio/
+    │   └── Case-Studies/
+    ├── Shared/
+    │   ├── Contact/
+    │   ├── Education/
+    │   ├── Certificates/
+    │   └── Professional-Links/
+    ├── Unsorted/
+    └── Archive/
 ```
 
-`Unsorted` is for professional material whose role or purpose cannot be determined confidently. `Archive` is only for files the user identifies as superseded or no longer active; never archive a file merely because it is old.
+`Unsorted` is for material that is clearly professional but cannot be assigned confidently. `Archive` is only for files the user identifies as superseded or no longer active; never archive a file merely because it is old.
 
-## Safe organization process
+## Automatic organization rules
 
-1. Inventory and inspect candidate-professional files before deciding where they belong. Exclude secrets, browser data, dependency folders, version-control internals, and unrelated personal files.
-2. Build a concise move plan: current path, proposed destination, detected purpose, career track, and confidence. Show ambiguous items separately.
-3. Ask for confirmation of the plan before creating the directory tree or moving any existing file. The user's approval of the layout alone is not approval to move every file.
-4. After confirmation, create the approved folders and move only the confirmed files. Preserve filenames, file contents, and modification times where the filesystem allows. Do not rename, overwrite, delete, or create duplicate copies.
-5. Place a file in `Unsorted` only when it is clearly professional but cannot be assigned safely. Leave excluded, unrelated, unreadable, or sensitive files in place and report them without moving them.
-6. Update `CANDIDATE_CONTEXT.md` with the new relative paths, detected purpose, and confidence. Do not copy personal values into it.
-7. Report the completed moves, items left in place, and anything needing user review.
+1. Inventory the outer task workspace before moving anything. Skip the managed directory itself and exclude secrets, browser data, dependency folders, version-control internals, unrelated personal files, and unreadable binary data.
+2. Create the managed directory and complete career hierarchy when they are missing.
+3. Move every high-confidence candidate-professional file into its best matching destination in `Career/`. Preserve its filename and contents.
+4. Move a clearly professional file with an uncertain track or purpose to `Career/Unsorted/`; do not guess a career track.
+5. Leave excluded, unrelated, unreadable, sensitive, and filename-collision files in place. Do not overwrite, rename, delete, or duplicate anything. Report them in the opening summary or context map as appropriate.
+6. Update `CANDIDATE_CONTEXT.md` after moving files, recording their destination, detected purpose, track, and confidence. Do not copy personal values into it.
+
+The move is automatic because every destination is inside the skill's dedicated managed directory and the source must be classified as candidate-professional material. It does not need a separate user confirmation.
 
 ## Classification rules
 
-- **CV:** Put role-targeted CVs in the matching track's `CV/`. When a CV is genuinely general, ask the user which track should own it rather than duplicating it.
+- **CV:** Put role-targeted CVs in the matching track's `CV/`. When a CV is genuinely general, move it to `Career/Unsorted/` and ask the user later which track should own it rather than duplicating it.
 - **Projects:** Put front-end implementation work in `Frontend-Development/Projects/`; identity deliverables in `Visual-Identity/Projects/`.
 - **Product case studies:** Put documented UX, product, or interface case studies in `Product-Design/Case-Studies/`.
 - **Portfolio:** Put product-design portfolios in `Product-Design/Portfolio/`; identity portfolios in `Visual-Identity/Portfolio/`.
 - **Certificates:** Place track-specific certificates in the matching track. Place genuinely cross-disciplinary certificates in `Shared/Certificates/`.
-- **Shared material:** Use `Shared/Education/` for education records and `Shared/Professional-Links/` for link documents or exported profile material. Do not copy contact values from private profile files into `Shared/Contact/`; move only explicit professional contact documents that the user wants organized.
+- **Shared material:** Use `Shared/Education/` for education records and `Shared/Professional-Links/` for link documents or exported profile material. Do not copy contact values from private profile files into `Shared/Contact/`; move only explicit professional contact documents that are safe to organize.
 
-If an item applies to more than one track, choose one primary destination based on its strongest evidence and record the other relevant tracks in `CANDIDATE_CONTEXT.md`. Do not duplicate it unless the user explicitly asks.
+If an item applies to more than one track, choose one primary destination based on its strongest evidence and record the other relevant tracks in `CANDIDATE_CONTEXT.md`. Do not duplicate it.

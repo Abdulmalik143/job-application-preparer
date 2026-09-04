@@ -4,7 +4,7 @@ Use this guide to discover candidate evidence from every relevant file in the ta
 
 ## Source authority
 
-Original candidate documents are authoritative. `CANDIDATE_CONTEXT.md` is only a navigation map. `APPLICATION_PROFILE.md` is an explicit, private user-provided source for recurring application answers, and `EXPERIENCE_PROFILE.md` is an explicit, private user-provided source for verified work history. `APPLICATION_TRACKER.md` records browser workflow state only and is never evidence for a candidate fact. A factual answer must be traceable to one or more original sources or a confirmed profile entry.
+Original candidate documents are authoritative. All local Markdown files named in this guide live in the managed `job-application-preparer/` directory; read [managed-workspace.md](managed-workspace.md) first. `CANDIDATE_CONTEXT.md` is only a navigation map. `APPLICATION_PROFILE.md` is an explicit, private user-provided source for recurring application answers, and `EXPERIENCE_PROFILE.md` is an explicit, private user-provided source for verified work history. `APPLICATION_TRACKER.md` records browser workflow state only and is never evidence for a candidate fact. A factual answer must be traceable to one or more original sources or a confirmed profile entry.
 
 Use practical confidence levels:
 
@@ -16,36 +16,34 @@ Automatically fill factual fields primarily from high-confidence evidence. Use m
 
 ## First-run workspace initialization
 
-At the start of the first skill conversation in a workspace, recursively inventory every file and folder. Classify each file as candidate-professional, profile data, irrelevant, unreadable, or excluded. For every readable candidate-professional file, inspect enough of its content to classify it and extract supported evidence; use the appropriate document, PDF, image, or text capability. Do this before asking the user for a job link or opening a browser.
+At the start of the first skill conversation in a workspace, resolve or create `job-application-preparer/` at the task-workspace root, then recursively inventory every file and folder outside it. Classify each file as candidate-professional, profile data, irrelevant, unreadable, or excluded. For every readable candidate-professional file, inspect enough of its content to classify it and extract supported evidence; use the appropriate document, PDF, image, or text capability. Do this before asking the user for a job link or opening a browser.
 
 Do not open credentials, secret files, browser profiles, caches, dependency folders, version-control internals, or unrelated binary data. Record excluded and unreadable files in `CANDIDATE_CONTEXT.md` by path and reason without copying their contents.
 
-Create or refresh the local navigation, reuse, and continuity files during this initialization:
+Create or refresh the local navigation, reuse, and continuity files inside `job-application-preparer/` during this initialization:
 
 - `CANDIDATE_CONTEXT.md` - semantic workspace map; never duplicate personal values.
 - `APPLICATION_PROFILE.md` - private reusable generic application data.
 - `EXPERIENCE_PROFILE.md` - private reusable work history and projects.
 - `APPLICATION_TRACKER.md` - private state for open, paused, and ready-for-review applications; never store field values or authentication data here.
 
-Starting the skill authorizes creation of these local files unless the user explicitly requests read-only work. Keep the three private files untracked when the workspace uses Git. Prepopulate only high-confidence, non-sensitive values and verified experience records with their source paths; leave sensitive and decision fields blank.
+Starting the skill authorizes creation of this managed directory, the local files, and the approved career hierarchy unless the user explicitly requests read-only work. Keep the entire managed directory untracked when the workspace uses Git. Prepopulate only high-confidence, non-sensitive values and verified experience records with their source paths; leave sensitive and decision fields blank.
 
 ## Discovery procedure
 
-1. Use the first-run inventory when needed; otherwise rescan changed, added, or previously unclassified files. Prioritize candidate-professional files including CVs, resumes, profiles, portfolios, case studies, projects, experience, education, certifications, preferences, and reusable application answers.
-2. Read `CANDIDATE_CONTEXT.md` first if it exists. Confirm that referenced files still exist and verify important facts in original sources.
-3. Read `APPLICATION_PROFILE.md`, `EXPERIENCE_PROFILE.md`, and `APPLICATION_TRACKER.md` if the user has created them. Confirm profile entries are current enough for the target application and do not use them to silently resolve a conflict with an original document. Use the tracker only to resume or report the browser workflow.
+1. Use the first-run inventory when needed; otherwise rescan changed, added, or previously unclassified files outside the managed directory. Prioritize candidate-professional files including CVs, resumes, profiles, portfolios, case studies, projects, experience, education, certifications, preferences, and reusable application answers.
+2. Read managed `CANDIDATE_CONTEXT.md` first if it exists. Confirm that referenced files still exist and verify important facts in original sources.
+3. Read managed `APPLICATION_PROFILE.md`, `EXPERIENCE_PROFILE.md`, and `APPLICATION_TRACKER.md` if they exist. Confirm profile entries are current enough for the target application and do not use them to silently resolve a conflict with an original document. Use the tracker only to resume or report the browser workflow.
 4. Inspect the contents of likely files using the appropriate document, PDF, image, or text capability. Do not classify on filename alone. For files classified as a CV or resume, retain the accessible filesystem last-modified time only as a freshness signal for the opening conversation; it is not career evidence.
 5. Distinguish shared facts from role-specific material based on evidence, not a predetermined schema.
 6. Detect professional profiles from recurring roles, skills, projects, documents, and portfolio evidence. Allow overlap only when it is genuinely relevant to the target job.
 7. Record missing information, ambiguous files, and conflicts. Do not select between conflicting sources without user confirmation or a clearly authoritative correction.
 
-If the workspace is reasonably structured, respect it and use it directly. If it is unstructured or spread across several files, continue with semantic discovery rather than asking the user to reorganize it.
-
-When the user explicitly asks to organize their professional files, read [career-organization.md](career-organization.md). First produce a move plan and obtain confirmation; then create the approved structure and move only confirmed candidate-professional files.
+Read [career-organization.md](career-organization.md) during initialization. Automatically organize high-confidence candidate-professional files within the managed career structure, while leaving excluded and unrelated files outside it.
 
 ## `CANDIDATE_CONTEXT.md`
 
-Create or update this file during first-run workspace initialization, then refresh it when relevant files change. Keep paths relative to the workspace and preserve the existing structure.
+Create or update this managed file during first-run workspace initialization, then refresh it when relevant files change. Keep source paths relative to the outer task workspace and preserve the existing structure.
 
 The map should primarily contain source paths, classifications, brief summaries, profile associations, confidence, conflicts, unknowns, and navigation notes. Avoid copying full documents or PII values when a source reference is enough.
 
@@ -114,4 +112,4 @@ For a conflict, name the fact, each source, each differing value only when neces
 
 Do not inspect unrelated private files, export candidate data outside the task, or duplicate sensitive values across the index. User-provided application preferences are evidence only for the scope in which they were intentionally provided.
 
-`APPLICATION_PROFILE.md`, `EXPERIENCE_PROFILE.md`, and `APPLICATION_TRACKER.md` are separate from this map. They may contain user-entered reusable form data, verified work history, and application workflow state, respectively, and must remain private and untracked; never copy their values or browser state into `CANDIDATE_CONTEXT.md`.
+`APPLICATION_PROFILE.md`, `EXPERIENCE_PROFILE.md`, and `APPLICATION_TRACKER.md` are separate managed files. They may contain user-entered reusable form data, verified work history, and application workflow state, respectively, and must remain private and untracked; never copy their values or browser state into `CANDIDATE_CONTEXT.md`.
