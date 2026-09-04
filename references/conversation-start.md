@@ -25,6 +25,20 @@ If you'd prefer to continue in English, just reply: English.
 
 Omit empty categories. Do not claim a file was read or a profile was updated when it was excluded, unreadable, or unsupported.
 
+## CV freshness signal
+
+For candidate files classified as a CV or resume, inspect the accessible filesystem last-modified time. When at least one is available, use the most recently modified usable CV/resume as the freshness signal. If it was modified **more than 90 days ago**, add one brief sentence to the opening and fold its question into the existing request for new material.
+
+Use wording that makes the limit clear: the timestamp is a prompt to review, not evidence that the CV is incomplete. Express the age naturally when useful, such as “منذ حوالي 4 أشهر,” while retaining the exact file reference when that helps the user identify it.
+
+Example addition:
+
+```text
+أحدث CV قابل للاستخدام عُدّل منذ حوالي <مدة>، وهذا مجرد مؤشر للمراجعة. هل لديك خبرة جديدة أو مشروع أو شهادة لم تُضف بعد؟
+```
+
+Do not show this prompt when the newest usable CV/resume is 90 days old or newer, when no CV/resume exists, or when its last-modified time is unavailable or unreliable. Ask it at most once per conversation. Never use file age to infer that the candidate has new experience or that their CV is inaccurate.
+
 ## When the workspace has no usable professional material
 
 Say plainly that no usable candidate-professional material was found. Explain that the skill can build the local organization from whatever the user provides, without requiring a particular folder structure.
@@ -47,6 +61,7 @@ If you'd prefer to continue in English, just reply: English.
 
 - Ask one helpful next question, not a long intake questionnaire.
 - Keep Arabic as the conversation language unless the user explicitly requests English or clearly writes a conversational reply in English. Do not switch merely because a supplied CV, job post, or attachment is in English.
+- If the latest usable CV/resume is older than 90 days, use the CV freshness signal once and merge it into the normal question about additions.
 - Include `If you'd prefer to continue in English, just reply: English.` as the last line of the first orientation only.
 - Do not ask for a job URL until after the orientation unless the user has already supplied one.
 - If the user provided a specific job, post, or outreach task in the opening message, still give a brief discovery summary, then continue directly to that task instead of waiting for a separate confirmation.

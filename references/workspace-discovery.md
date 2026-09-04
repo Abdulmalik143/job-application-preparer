@@ -34,7 +34,7 @@ Starting the skill authorizes creation of these local files unless the user expl
 1. Use the first-run inventory when needed; otherwise rescan changed, added, or previously unclassified files. Prioritize candidate-professional files including CVs, resumes, profiles, portfolios, case studies, projects, experience, education, certifications, preferences, and reusable application answers.
 2. Read `CANDIDATE_CONTEXT.md` first if it exists. Confirm that referenced files still exist and verify important facts in original sources.
 3. Read `APPLICATION_PROFILE.md`, `EXPERIENCE_PROFILE.md`, and `APPLICATION_TRACKER.md` if the user has created them. Confirm profile entries are current enough for the target application and do not use them to silently resolve a conflict with an original document. Use the tracker only to resume or report the browser workflow.
-4. Inspect the contents of likely files using the appropriate document, PDF, image, or text capability. Do not classify on filename alone.
+4. Inspect the contents of likely files using the appropriate document, PDF, image, or text capability. Do not classify on filename alone. For files classified as a CV or resume, retain the accessible filesystem last-modified time only as a freshness signal for the opening conversation; it is not career evidence.
 5. Distinguish shared facts from role-specific material based on evidence, not a predetermined schema.
 6. Detect professional profiles from recurring roles, skills, projects, documents, and portfolio evidence. Allow overlap only when it is genuinely relevant to the target job.
 7. Record missing information, ambiguous files, and conflicts. Do not select between conflicting sources without user confirmation or a clearly authoritative correction.
