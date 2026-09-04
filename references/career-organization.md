@@ -43,7 +43,7 @@ When evidence supports several tracks, create all of them. Most cross-track file
 2. Discover the candidate's career tracks from all supported professional sources, then create only the necessary directories and content folders.
 3. Move every high-confidence candidate-professional file into its best matching track and content folder. Preserve its filename and contents. Apply the multi-track CV procedure instead of the single-destination rule when the document substantively represents more than one discovered track.
 4. Put a clearly professional file with an uncertain track or purpose in `Career/Unsorted/`; do not invent a track.
-5. Leave excluded, unrelated, unreadable, sensitive, and filename-collision files in place. Do not overwrite, rename, or delete anything. The only permitted duplication is a byte-identical fallback placement for a multi-track CV when safe links are unavailable, as defined below. Report conflicts in the opening summary or context map.
+5. Leave excluded, unrelated, unreadable, and filename-collision files in place. Do not overwrite, rename, or delete anything. A certificate, graduation document, or other clearly candidate-professional source may still be organized when it incidentally contains an identifier or other sensitive value; do not extract, repeat, or index that value. The only permitted duplication is a byte-identical fallback placement for a multi-track CV when safe links are unavailable, as defined below. Report conflicts in the opening summary or context map.
 6. Update `CANDIDATE_CONTEXT.md` after moving files, recording their canonical destination, visible placements, detected purpose, supported tracks, specialization status, and confidence. Do not copy personal values into it.
 
 The move is automatic because every destination is inside the skill's dedicated managed directory and the source must be classified as candidate-professional material. It does not need a separate user confirmation.
@@ -54,6 +54,7 @@ The move is automatic because every destination is inside the skill's dedicated 
 - **Projects, portfolio, and case studies:** Use the discovered track that best matches the work. Create `Projects/`, `Portfolio/`, or `Case-Studies/` only when those kinds of material exist.
 - **Certificates:** Classify a certificate using its documented subject and the candidate evidence. A backend certificate belongs in the discovered backend track; a certificate that genuinely supports multiple tracks belongs in `Shared/Certificates/`.
 - **Shared material:** Use `Shared/Education/` for education records and `Shared/Professional-Links/` for link documents or exported profile material. Do not copy contact values from private profile files into `Shared/Contact/`; move only explicit professional contact documents that are safe to organize.
+- **Incidental sensitive values:** Organize a clearly professional certificate, graduation document, transcript, CV, or portfolio source despite an incidental national ID, student number, date of birth, address, or similar value. Keep the original file local and untracked. Do not copy those values into `CANDIDATE_CONTEXT.md`, profile files, opening summaries, filenames, generated documents, or chat. Upload the source only when the application specifically needs it and the user authorizes that upload.
 
 ## Multi-track CV procedure
 

@@ -16,7 +16,7 @@ Automatically fill factual fields primarily from high-confidence evidence. Use m
 
 ## First-run workspace initialization
 
-At the start of the first skill conversation in a workspace, resolve or create `job-application-preparer/` at the task-workspace root, then recursively inventory every file and folder outside it. Classify each file as candidate-professional, profile data, irrelevant, unreadable, or excluded. For every readable candidate-professional file, inspect enough of its content to classify it and extract supported evidence; use the appropriate document, PDF, image, or text capability. Do this before asking the user for a job link or opening a browser.
+At the start of the first skill conversation in a workspace, resolve or create `job-application-preparer/` at the task-workspace root, then recursively inventory every file and folder outside it. Classify each file as candidate-professional, profile data, irrelevant, unreadable, or excluded. A clearly candidate-professional document remains candidate-professional even when it incidentally contains an identifier or other sensitive value. For every readable candidate-professional file, inspect enough of its content to classify it and extract supported professional evidence; do not extract or record incidental sensitive values. Use the appropriate document, PDF, image, or text capability. Do this before asking the user for a job link or opening a browser.
 
 Do not open credentials, secret files, browser profiles, caches, dependency folders, version-control internals, or unrelated binary data. Record excluded and unreadable files in `CANDIDATE_CONTEXT.md` by path and reason without copying their contents.
 
