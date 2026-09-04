@@ -1,6 +1,6 @@
 # Conversational Start
 
-Begin a new workspace conversation by discovering and organizing candidate material before asking for a job link or opening Chrome. Respond in the user's language and use a warm, concise conversational tone.
+Begin a new workspace conversation by discovering and organizing candidate material before asking for a job link or opening Chrome. Start in Arabic and use a warm, concise conversational tone. End the opening with a short English option to continue in English. If the user ignores that option, continue in Arabic.
 
 ## When professional material is present
 
@@ -8,17 +8,19 @@ After discovery and local-file setup, show a compact, privacy-aware summary. Lis
 
 Then say that the local application memory has been created or updated and ask whether the user has anything new to add. Invite them to upload files, place them in the workspace, or paste relevant professional information. Explain that the skill will verify, categorize, and retain only reusable information in the appropriate private local file.
 
-Use this shape, adapting it to the actual findings and the user's language:
+Use this Arabic shape, adapting it to the actual findings:
 
 ```text
-I found and organized:
-- CVs: <paths or filenames>
-- Portfolio/projects: <paths or filenames>
-- Certificates or supporting material: <paths or filenames>
+وجدت ورتبت:
+- السير الذاتية: <paths or filenames>
+- البورتفوليو أو المشاريع: <paths or filenames>
+- الشهادات أو الملفات الداعمة: <paths or filenames>
 
-I updated the local application memory from the supported information. Do you have anything new to add—such as an updated CV, project, certificate, link, or work-history correction? Send it here or add it to this workspace, and I will organize it for future applications.
+حدّثت ذاكرة التقديم المحلية بالمعلومات الموثقة. هل لديك شيء جديد تريد إضافته، مثل CV محدث أو مشروع أو شهادة أو رابط أو تصحيح لخبرة سابقة؟ أرسله هنا أو أضفه إلى هذا المجلد، وسأرتبه لاستخدامه في التقديمات القادمة.
 
-When you are ready, send a job link, a social post, or tell me what you want to prepare.
+عندما تكون جاهزًا، أرسل رابط وظيفة أو إعلانًا أو أخبرني بما تريد تجهيزه.
+
+If you'd prefer to continue in English, just reply: English.
 ```
 
 Omit empty categories. Do not claim a file was read or a profile was updated when it was excluded, unreadable, or unsupported.
@@ -29,19 +31,23 @@ Say plainly that no usable candidate-professional material was found. Explain th
 
 Invite the user to add a CV, portfolio, project or case-study file, certificate, professional profile, or a pasted work-history summary. If they do not have files yet, ask them to share only the basic professional information they want the skill to use; do not pressure them to provide sensitive, legal, demographic, or authentication information.
 
-Use this shape, adapting it to the user's language:
+Use this Arabic shape, adapting it to the user's context:
 
 ```text
-I could not find any usable CV, portfolio, project, certificate, or professional profile in this workspace yet.
+لم أجد في هذا المجلد حتى الآن CV أو بورتفوليو أو مشروعًا أو شهادة أو ملفًا مهنيًا يمكن استخدامه.
 
-Add or upload any material you have, or paste a short professional summary. I will sort it into a candidate map, reusable application information, and verified work history so it is ready for future applications.
+أضف أو ارفع أي مادة لديك، أو اكتب ملخصًا مهنيًا قصيرًا. سأرتبها إلى خريطة للملفات، ومعلومات تقديم قابلة لإعادة الاستخدام، وخبرات موثقة لتكون جاهزة للتقديمات القادمة.
 
-You can start with a CV, a portfolio link, a project description, or your work-history details. What would you like to add first?
+يمكنك البدء بـCV أو رابط بورتفوليو أو وصف مشروع أو تفاصيل خبراتك. ما الذي ترغب في إضافته أولًا؟
+
+If you'd prefer to continue in English, just reply: English.
 ```
 
 ## Conversation rules
 
 - Ask one helpful next question, not a long intake questionnaire.
+- Keep Arabic as the conversation language unless the user explicitly requests English or clearly writes a conversational reply in English. Do not switch merely because a supplied CV, job post, or attachment is in English.
+- Include `If you'd prefer to continue in English, just reply: English.` as the last line of the first orientation only.
 - Do not ask for a job URL until after the orientation unless the user has already supplied one.
 - If the user provided a specific job, post, or outreach task in the opening message, still give a brief discovery summary, then continue directly to that task instead of waiting for a separate confirmation.
 - Keep the distinction clear: `CANDIDATE_CONTEXT.md` maps sources, `APPLICATION_PROFILE.md` stores reusable generic answers, `EXPERIENCE_PROFILE.md` stores verified experience, and `APPLICATION_TRACKER.md` records application progress.
