@@ -12,7 +12,7 @@ Job applications are repetitive, but a candidate's story should not be. Job Appl
 
 - 🔎 **Discovers candidate evidence** from resumes, portfolios, projects, and reusable answers in structured or unstructured workspaces.
 - 💬 **Starts conversationally** by showing what professional material it found, asking for any new additions, and organizing them into private local application memory.
-- 🗂️ **Creates one dedicated workspace folder** named `job-application-preparer`, then automatically sorts verified professional files into its career-track structure while leaving unrelated files alone.
+- 🗂️ **Creates one dedicated workspace folder** named `job-application-preparer`, then discovers career tracks from the candidate's evidence and sorts verified professional files without assuming a profession.
 - 🧱 **Bootstraps the workspace** by creating a candidate map plus private application, work-history, and application-tracking files on first use.
 - 🗂️ **Remembers common form answers locally** in a private application profile, so users do not repeat the same generic information for every application.
 - 💼 **Builds a reusable work-history profile** from verified experience, making employment sections faster to complete.

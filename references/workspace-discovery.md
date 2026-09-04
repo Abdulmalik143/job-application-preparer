@@ -27,7 +27,7 @@ Create or refresh the local navigation, reuse, and continuity files inside `job-
 - `EXPERIENCE_PROFILE.md` - private reusable work history and projects.
 - `APPLICATION_TRACKER.md` - private state for open, paused, and ready-for-review applications; never store field values or authentication data here.
 
-Starting the skill authorizes creation of this managed directory, the local files, and the approved career hierarchy unless the user explicitly requests read-only work. Keep the entire managed directory untracked when the workspace uses Git. Prepopulate only high-confidence, non-sensitive values and verified experience records with their source paths; leave sensitive and decision fields blank.
+Starting the skill authorizes creation of this managed directory, the local files, and the evidence-discovered career hierarchy unless the user explicitly requests read-only work. Keep the entire managed directory untracked when the workspace uses Git. Prepopulate only high-confidence, non-sensitive values and verified experience records with their source paths; leave sensitive and decision fields blank.
 
 ## Discovery procedure
 
@@ -39,7 +39,7 @@ Starting the skill authorizes creation of this managed directory, the local file
 6. Detect professional profiles from recurring roles, skills, projects, documents, and portfolio evidence. Allow overlap only when it is genuinely relevant to the target job.
 7. Record missing information, ambiguous files, and conflicts. Do not select between conflicting sources without user confirmation or a clearly authoritative correction.
 
-Read [career-organization.md](career-organization.md) during initialization. Automatically organize high-confidence candidate-professional files within the managed career structure, while leaving excluded and unrelated files outside it.
+Read [career-organization.md](career-organization.md) during initialization. Discover career tracks from supported candidate sources, then automatically organize high-confidence candidate-professional files within the managed career structure while leaving excluded and unrelated files outside it.
 
 ## `CANDIDATE_CONTEXT.md`
 
