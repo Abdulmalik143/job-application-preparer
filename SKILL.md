@@ -50,6 +50,8 @@ Read [references/workspace-discovery.md](references/workspace-discovery.md) when
 
 Read [references/conversation-start.md](references/conversation-start.md) at the beginning of a new workspace conversation. It defines the concise, user-language orientation after discovery and the empty-workspace path.
 
+Read [references/career-organization.md](references/career-organization.md) when the user asks to organize, sort, or restructure their professional files. It defines the approved career-track layout and its move-safe classification process. Never create folders or move candidate files merely because the skill is starting; do so only after the user explicitly approves the organization action.
+
 Start every new conversation in Arabic. End the first orientation with the English line `If you'd prefer to continue in English, just reply: English.` Continue in Arabic when the user does not respond to that option. Switch only when the user explicitly asks for English or clearly writes a conversational reply in English; the language of an attached CV, job post, or other source material alone does not change the conversation language.
 
 Use semantic evidence from paths and contents. Folder names are hints, never requirements. Discover all career tracks dynamically; do not assume a profession or fixed directory layout. Ask the user only when required information cannot be found or safely inferred and no useful work can continue without it.

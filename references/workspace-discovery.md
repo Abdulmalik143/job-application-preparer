@@ -41,6 +41,8 @@ Starting the skill authorizes creation of these local files unless the user expl
 
 If the workspace is reasonably structured, respect it and use it directly. If it is unstructured or spread across several files, continue with semantic discovery rather than asking the user to reorganize it.
 
+When the user explicitly asks to organize their professional files, read [career-organization.md](career-organization.md). First produce a move plan and obtain confirmation; then create the approved structure and move only confirmed candidate-professional files.
+
 ## `CANDIDATE_CONTEXT.md`
 
 Create or update this file during first-run workspace initialization, then refresh it when relevant files change. Keep paths relative to the workspace and preserve the existing structure.
