@@ -16,7 +16,7 @@ Automatically fill factual fields primarily from high-confidence evidence. Use m
 
 ## First-run workspace initialization
 
-At the first application-preparation run in a workspace, recursively inventory every file and folder. Classify each file as candidate-professional, profile data, irrelevant, unreadable, or excluded. For every readable candidate-professional file, inspect enough of its content to classify it and extract supported evidence; use the appropriate document, PDF, image, or text capability.
+At the start of the first skill conversation in a workspace, recursively inventory every file and folder. Classify each file as candidate-professional, profile data, irrelevant, unreadable, or excluded. For every readable candidate-professional file, inspect enough of its content to classify it and extract supported evidence; use the appropriate document, PDF, image, or text capability. Do this before asking the user for a job link or opening a browser.
 
 Do not open credentials, secret files, browser profiles, caches, dependency folders, version-control internals, or unrelated binary data. Record excluded and unreadable files in `CANDIDATE_CONTEXT.md` by path and reason without copying their contents.
 
@@ -27,7 +27,7 @@ Create or refresh the local navigation, reuse, and continuity files during this 
 - `EXPERIENCE_PROFILE.md` - private reusable work history and projects.
 - `APPLICATION_TRACKER.md` - private state for open, paused, and ready-for-review applications; never store field values or authentication data here.
 
-Starting an application-preparation workflow authorizes creation of these local files unless the user explicitly requests read-only work. Keep the three private files untracked when the workspace uses Git. Prepopulate only high-confidence, non-sensitive values and verified experience records with their source paths; leave sensitive and decision fields blank.
+Starting the skill authorizes creation of these local files unless the user explicitly requests read-only work. Keep the three private files untracked when the workspace uses Git. Prepopulate only high-confidence, non-sensitive values and verified experience records with their source paths; leave sensitive and decision fields blank.
 
 ## Discovery procedure
 

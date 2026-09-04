@@ -20,18 +20,19 @@ Prepare applications and job-post outreach from evidence, leave unsupported deci
 
 ## Workflow
 
-1. Initialize the workspace before opening a browser. Recursively inventory the workspace, inspect readable candidate and professional files, and read existing `CANDIDATE_CONTEXT.md`, `APPLICATION_PROFILE.md`, `EXPERIENCE_PROFILE.md`, and `APPLICATION_TRACKER.md` when present.
-2. On the first application-preparation run, create or refresh `CANDIDATE_CONTEXT.md` and create missing private `APPLICATION_PROFILE.md`, `EXPERIENCE_PROFILE.md`, and `APPLICATION_TRACKER.md` templates. Treat starting this workflow as permission to create these local files unless the user asks for read-only work. Prepopulate only high-confidence, non-sensitive facts or verified experience records; leave all sensitive and decision fields blank.
-3. Open Google Chrome after workspace initialization. Inspect its tabs for the relevant job posting or application, and open the supplied job URL when one is available. Use one designated tab per application, process applications sequentially, and do not substitute another browser for form interaction.
-4. Analyze the target job before choosing candidate materials. Capture the company, role, responsibilities, required and preferred qualifications, tools, seniority, location, employment type, and requested documents.
-5. Identify the professional profile or combination of profiles that best matches the job. Select the CV, portfolio, projects, experience records, and links based on content and relevance—not discovery order or filenames alone.
-6. Build a task-local application context and tracker entry: job identity, selected profile, chosen files, supported facts, reusable profile values, relevant experience records, conflicts, unknowns, user decisions, current page, and last safe stage. Keep each application isolated.
-7. Inspect the entire form or current step before filling. Classify every field using [references/application-fields.md](references/application-fields.md) and check the reusable profiles before asking the user.
-8. Fill verified facts and evidence-grounded professional answers. Upload only clearly role-appropriate files. Leave unsupported or ambiguous fields unresolved.
-9. Advance through verified non-submitting steps such as `Next`, `Continue`, and `Review`; update the tracker after every meaningful step. A label is not enough: confirm the action advances or saves without sending an application.
-10. Batch unresolved fields into a concise chat question. First mark the tracker `PAUSED — USER INPUT NEEDED` with the page, stage, exact labels, and next required action. After the user answers, map each answer to its exact form field, save only reusable facts or experience records to the appropriate local profile, and then resume the same Chrome tab.
-11. Review for factual consistency, correct profile and uploads, suspicious autofill, conflicts, unanswered required fields, and accidental cross-application content.
-12. Stop at the actual final review/submission boundary and report what is ready, unresolved, or blocked. Never activate the final control.
+1. Begin every new workspace conversation with discovery before opening a browser. Recursively inventory the workspace, inspect readable candidate and professional files, and read existing `CANDIDATE_CONTEXT.md`, `APPLICATION_PROFILE.md`, `EXPERIENCE_PROFILE.md`, and `APPLICATION_TRACKER.md` when present.
+2. On the first run, create or refresh `CANDIDATE_CONTEXT.md` and create missing private `APPLICATION_PROFILE.md`, `EXPERIENCE_PROFILE.md`, and `APPLICATION_TRACKER.md` templates. Treat starting this workflow as permission to create these local files unless the user asks for read-only work. Prepopulate only high-confidence, non-sensitive facts or verified experience records; leave all sensitive and decision fields blank.
+3. Start with the conversational orientation in [references/conversation-start.md](references/conversation-start.md). Summarize what professional material was found without exposing personal values, ask whether anything new should be added to the local application memory, and wait for the user's next goal. If no candidate-professional material exists, invite the user to add or paste it and explain that the skill will classify it into the local files. Do not open Chrome merely because the skill was invoked without a job task.
+4. Open Google Chrome only for a browser-based application after workspace initialization and once there is a job to work on. Inspect its tabs for the relevant job posting or application, and open the supplied job URL when one is available. Use one designated tab per application, process applications sequentially, and do not substitute another browser for form interaction.
+5. Analyze the target job before choosing candidate materials. Capture the company, role, responsibilities, required and preferred qualifications, tools, seniority, location, employment type, and requested documents.
+6. Identify the professional profile or combination of profiles that best matches the job. Select the CV, portfolio, projects, experience records, and links based on content and relevance—not discovery order or filenames alone.
+7. Build a task-local application context and tracker entry: job identity, selected profile, chosen files, supported facts, reusable profile values, relevant experience records, conflicts, unknowns, user decisions, current page, and last safe stage. Keep each application isolated.
+8. Inspect the entire form or current step before filling. Classify every field using [references/application-fields.md](references/application-fields.md) and check the reusable profiles before asking the user.
+9. Fill verified facts and evidence-grounded professional answers. Upload only clearly role-appropriate files. Leave unsupported or ambiguous fields unresolved.
+10. Advance through verified non-submitting steps such as `Next`, `Continue`, and `Review`; update the tracker after every meaningful step. A label is not enough: confirm the action advances or saves without sending an application.
+11. Batch unresolved fields into a concise chat question. First mark the tracker `PAUSED — USER INPUT NEEDED` with the page, stage, exact labels, and next required action. After the user answers, map each answer to its exact form field, save only reusable facts or experience records to the appropriate local profile, and then resume the same Chrome tab.
+12. Review for factual consistency, correct profile and uploads, suspicious autofill, conflicts, unanswered required fields, and accidental cross-application content.
+13. Stop at the actual final review/submission boundary and report what is ready, unresolved, or blocked. Never activate the final control.
 
 ## Social-post outreach
 
@@ -46,6 +47,8 @@ For an email address, prepare a subject line and paste-ready email. For a phone 
 ## Workspace routing
 
 Read [references/workspace-discovery.md](references/workspace-discovery.md) whenever candidate files must be located, classified, or indexed. It defines first-run full-workspace inventory, source authority, conflict handling, and `CANDIDATE_CONTEXT.md` behavior.
+
+Read [references/conversation-start.md](references/conversation-start.md) at the beginning of a new workspace conversation. It defines the concise, user-language orientation after discovery and the empty-workspace path.
 
 Use semantic evidence from paths and contents. Folder names are hints, never requirements. Discover all career tracks dynamically; do not assume a profession or fixed directory layout. Ask the user only when required information cannot be found or safely inferred and no useful work can continue without it.
 
