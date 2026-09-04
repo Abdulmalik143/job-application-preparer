@@ -29,6 +29,6 @@ Starting this skill authorizes creation of the managed directory, its local Mark
 
 Never move or inspect credentials, secrets, browser profiles, caches, dependency directories, version-control internals, unrelated personal files, or unreadable binary files merely because they are beside candidate files. Leave them outside the managed directory and record only their path and exclusion reason in the context map when relevant.
 
-Do not overwrite an existing destination. If a filename collision or uncertain classification prevents a safe move, leave the source in place and report it for user review. Do not create duplicate copies.
+Do not overwrite an existing destination. If a filename collision or uncertain classification prevents a safe move, leave the source in place and report it for user review. Do not create duplicate copies except for the byte-identical multi-track CV compatibility fallback defined in [career-organization.md](career-organization.md); that exception must retain one canonical file and recorded identity checks.
 
 If the task workspace uses Git, keep the whole `job-application-preparer/` directory untracked by adding the exact directory name to the local `.git/info/exclude`. Do not alter a shared `.gitignore` automatically.

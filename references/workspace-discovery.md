@@ -36,7 +36,7 @@ Starting the skill authorizes creation of this managed directory, the local file
 3. Read managed `APPLICATION_PROFILE.md`, `EXPERIENCE_PROFILE.md`, and `APPLICATION_TRACKER.md` if they exist. Confirm profile entries are current enough for the target application and do not use them to silently resolve a conflict with an original document. Use the tracker only to resume or report the browser workflow.
 4. Inspect the contents of likely files using the appropriate document, PDF, image, or text capability. Do not classify on filename alone. For files classified as a CV or resume, retain the accessible filesystem last-modified time only as a freshness signal for the opening conversation; it is not career evidence.
 5. Distinguish shared facts from role-specific material based on evidence, not a predetermined schema.
-6. Detect professional profiles from recurring roles, skills, projects, documents, and portfolio evidence. Allow overlap only when it is genuinely relevant to the target job.
+6. Detect professional profiles from recurring roles, skills, projects, documents, and portfolio evidence. Allow overlap only when it is genuinely relevant to the target job. For every CV, determine whether it is dedicated to one discovered track, materially supports several tracks, or is general without clear track evidence.
 7. Record missing information, ambiguous files, and conflicts. Do not select between conflicting sources without user confirmation or a clearly authoritative correction.
 
 Read [career-organization.md](career-organization.md) during initialization. Discover career tracks from supported candidate sources, then automatically organize high-confidence candidate-professional files within the managed career structure while leaving excluded and unrelated files outside it.
@@ -73,6 +73,13 @@ Portfolio or evidence:
 Detected evidence:
 - <brief supported item>
 Confidence: High | Medium | Low
+
+## CV Coverage
+
+| Canonical CV | Type | Supported tracks | Visible placements | Dedicated coverage | Confidence |
+|---|---|---|---|---|---|
+| ./relative/resume | Dedicated | <track> | <paths> | <track> | High |
+| ./relative/resume | Multi-track | <tracks> | <paths and link/copy type> | None or <verified track> | High |
 
 ## Application Preferences
 

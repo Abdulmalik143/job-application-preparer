@@ -70,7 +70,11 @@ Do not choose an arbitrary option to advance. Leave the field unresolved, explai
 
 ## Upload selection
 
-Choose documents by role relevance and verified contents. Prefer the CV, portfolio, case study, or supporting document aligned to the selected professional profile. If multiple files are equally plausible, leave the upload unresolved and flag the alternatives. Never upload the first-discovered file merely for convenience.
+Choose documents by role relevance and verified contents. Prefer the CV, portfolio, case study, or supporting document aligned to the selected professional profile. Inspect contents rather than trusting folder placement or filenames.
+
+Before selecting a CV, check the target track's dedicated-CV coverage in `CANDIDATE_CONTEXT.md`. A multi-track CV placement inside a track folder does not make it dedicated. If the target track has no dedicated CV but an existing general or multi-track CV supports it, follow [ats-cv-writing.md](ats-cv-writing.md): ask whether the user wants a tailored ATS-friendly CV for this job or wants to use the current CV. Do not make that choice silently and do not upload a newly generated CV before it has been verified and shown to the user.
+
+If multiple dedicated files are equally plausible, leave the upload unresolved and flag the alternatives. Never upload the first-discovered file merely for convenience.
 
 ## Review ledger
 

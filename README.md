@@ -17,6 +17,9 @@ Job applications are repetitive, but a candidate's story should not be. Job Appl
 - 🗂️ **Remembers common form answers locally** in a private application profile, so users do not repeat the same generic information for every application.
 - 💼 **Builds a reusable work-history profile** from verified experience, making employment sections faster to complete.
 - 🎯 **Matches the right profile** to the role, selecting the most relevant CV, portfolio, and project evidence.
+- 🧭 **Handles multi-track CVs** by keeping one canonical resume and making it available from every career track it genuinely supports.
+- 📄 **Creates tailored ATS-friendly CVs on request** with evidence-grounded content, conservative FlowCV-inspired styling, and visual plus text-order verification.
+- 🙋 **Keeps the CV choice human-controlled** when a role has no dedicated resume: create a tailored version or continue with the existing multi-track CV.
 - ✍️ **Writes grounded answers** that are concise, role-specific, and supported by candidate sources.
 - ✉️ **Prepares tailored outreach** from social-media job posts, turning an advertised email address or phone number into a short, evidence-led draft that is ready to paste—not automatically sent.
 - 🧭 **Handles uncertainty honestly** by flagging conflicts, unknowns, sensitive questions, and personal decisions instead of guessing.
@@ -46,6 +49,7 @@ Use $job-application-preparer to draft a short email for this social-media job p
 
 - 📂 Candidate information is discovered from the workspace or files the user explicitly provides; it is never hardcoded into the skill.
 - 🔗 Every factual answer must be traceable to candidate evidence.
+- ✅ ATS guidance favors standard headings, one-column readability, truthful role keywords, and verified exports; it never promises an ATS score or guaranteed pass.
 - 🧩 Unsupported, conflicting, sensitive, and user-decision fields remain unresolved for human review.
 - 🔒 Passwords, verification codes, employer-specific answers, and legal acknowledgements are never saved as reusable profile data.
 - 🚫 The skill never submits, sends, confirms, calls, or otherwise finalizes a job application or outreach message.
