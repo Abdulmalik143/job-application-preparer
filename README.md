@@ -19,6 +19,7 @@ Job applications are repetitive, but a candidate's story should not be. Job Appl
 - 🎯 **Matches the right profile** to the role, selecting the most relevant CV, portfolio, and project evidence.
 - 🧭 **Handles multi-track CVs** by keeping one canonical resume and making it available from every career track it genuinely supports.
 - 📄 **Creates tailored ATS-friendly CVs on request** with evidence-grounded content, conservative FlowCV-inspired styling, and visual plus text-order verification.
+- 🔗 **Builds professional DOCX masters** with clean, clickable labels for verified LinkedIn, GitHub, portfolio, email, and phone links—then exports a text-based PDF only when required.
 - 🙋 **Keeps the CV choice human-controlled** when a role has no dedicated resume: create a tailored version or continue with the existing multi-track CV.
 - ✍️ **Writes grounded answers** that are concise, role-specific, and supported by candidate sources.
 - ✉️ **Prepares tailored outreach** from social-media job posts, turning an advertised email address or phone number into a short, evidence-led draft that is ready to paste—not automatically sent.

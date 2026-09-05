@@ -103,11 +103,14 @@ The supplied FlowCV example uses this general visual language. Its skills block 
 
 ## File formats and export
 
-- Follow the application instructions first. If the employer requests DOCX, upload DOCX; if it requests PDF, upload PDF; if both are accepted, choose the verified format most appropriate for that form.
-- When creating a new tailored CV and both formats are useful, keep an editable `.docx` source and export a text-based `.pdf` with embedded fonts.
+- Make `.docx` the editable master for every newly generated tailored CV. It preserves a revision-ready source and permits real hyperlink relationships instead of merely visible URL text.
+- Follow the application instructions first. If the employer requests DOCX, upload the verified DOCX; if it requests PDF, upload the verified PDF; if both are accepted, choose the verified format most appropriate for that form. Keep the master DOCX in either case.
+- When a PDF is needed, export a text-based `.pdf` from the final DOCX with embedded fonts. Do not make an image-only PDF or independently recreate a second, potentially divergent version.
 - Never deliver an image-only PDF. Do not rasterize the CV into a PDF.
 - Use a descriptive filename containing the candidate name and optionally the target role or company. Do not expose sensitive identifiers in filenames.
 - Preserve the source CV unchanged. Generated outputs are new, traceable derivatives whose source evidence and target role are recorded in `CANDIDATE_CONTEXT.md`.
+
+Read [docx-cv-output.md](docx-cv-output.md) before creating the DOCX. It defines the required hyperlink behavior, Word-specific quality gates, and output decision.
 
 ## Required verification
 
@@ -119,8 +122,9 @@ Do not call a CV finished merely because it exported successfully.
 4. Compare every claim and metric against the role-to-evidence matrix and source documents. Remove or flag anything unsupported.
 5. Confirm that important truthful job terms appear naturally and that no keyword stuffing, hidden content, or copied employer language creates a misleading claim.
 6. Check page size, page count, filename, accepted type, and reasonable file size for the target system.
-7. If an ATS-simulation or parsing checker is available, treat it as an additional heuristic only. Report the actual checks performed; never invent an ATS score or promise that a resume will pass.
-8. Present the generated files and a concise change summary to the user for review. Never upload a newly generated CV until the user has chosen that option and the document has passed these checks.
+7. For DOCX, verify that every professional URL and contact link uses a true external hyperlink relationship and opens the verified target; for exported PDF, verify that the links remain active when the export is intended for submission.
+8. If an ATS-simulation or parsing checker is available, treat it as an additional heuristic only. Report the actual checks performed; never invent an ATS score or promise that a resume will pass.
+9. Present the generated files and a concise change summary to the user for review. Never upload a newly generated CV until the user has chosen that option and the document has passed these checks.
 
 ## Research basis
 

@@ -59,6 +59,8 @@ Read [references/career-organization.md](references/career-organization.md) duri
 
 Read [references/ats-cv-writing.md](references/ats-cv-writing.md) whenever classifying CV specialization, choosing between a multi-track and dedicated CV, creating or tailoring a CV, or verifying a document before upload. It defines the required user decision when a target track lacks a dedicated CV, evidence-grounded ATS writing rules, conservative FlowCV-inspired presentation, output paths, and render-plus-text verification.
 
+When generating a tailored CV, read [references/docx-cv-output.md](references/docx-cv-output.md). Create a polished editable `.docx` as the master document using a DOCX-capable authoring workflow, then create a text-based `.pdf` only when the user or job application needs it. Use real external hyperlinks with concise visible labels for verified contact and professional links; never paste a raw URL merely because it is the hyperlink target.
+
 A CV that appears in several career-track folders may still be one multi-track document, not a dedicated version for each track. Preserve one canonical source, never overwrite the original when tailoring, and never claim universal ATS compatibility or an unverified ATS score.
 
 Start every new conversation in Arabic. End the first orientation with the English line `If you'd prefer to continue in English, just reply: English.` Continue in Arabic when the user does not respond to that option. Switch only when the user explicitly asks for English or clearly writes a conversational reply in English; the language of an attached CV, job post, or other source material alone does not change the conversation language.
