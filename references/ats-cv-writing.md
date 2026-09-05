@@ -30,6 +30,19 @@ Before uploading a CV for a target track:
 5. If the user chooses the existing CV, continue with it after checking freshness, relevance, accepted file type, and parsing quality.
 6. If the user chooses a tailored CV, preserve the original unchanged and create a derivative inside `Career/<Target-Track>/CV/Tailored/`. Use a clear filename such as `<Candidate>-<Company>-<Role>-CV.docx` and/or `.pdf`, sanitized for the filesystem. Do not overwrite an existing version.
 
+## Tailor without erasing the candidate
+
+Treat the complete CV and `EXPERIENCE_PROFILE.md` as an evidence library, not a document to be aggressively cut down. A target-specific CV should make the target role obvious in the first scan while still showing the candidate's credible professional range.
+
+1. Keep one complete master CV containing every verified role, project, capability, and strong bullet. Never tailor the master in place.
+2. Build a role-evidence plan before drafting: label each item `Lead` (directly supports the role), `Support` (shows a transferable or complementary strength), or `Reserve` (true but not needed for this version).
+3. Promote `Lead` evidence: it appears first in the summary, skills order, role bullets, and selected projects.
+4. Preserve `Support` evidence: normally retain the role in the chronology, one meaningful bullet or project, and the relevant skill category. A role is not removed solely because the employer did not name its exact discipline.
+5. Use `Reserve` material only when the document needs space; never replace it with empty space, generic claims, or invented metrics.
+6. Remove an entire verified role or project only when it adds no transferable value, duplicates stronger evidence, or the user asks to exclude it. Record the omission in the tailoring plan for interview preparation.
+
+Tailoring changes ordering, selection, phrasing, and emphasis—not the truth of the candidate's career. For a product, UI/UX, or multidisciplinary creative role, retain meaningful evidence of adjacent capabilities such as front-end implementation, research, visual identity, design systems, or project delivery when supported, even if the job description prioritizes only one of them.
+
 ## Content architecture
 
 Use reverse chronological structure unless the target context clearly requires an academic, federal, or other specialized CV format. Use standard section labels in the document language. A typical order is:
@@ -61,8 +74,9 @@ Reorder optional sections according to role relevance, but keep headings convent
 ### Experience and projects
 
 - Preserve accurate organization names, titles, locations, and dates. Never repair a gap or ambiguous date by guessing.
-- Begin bullets with a precise action verb and express `action + context + outcome` where evidence allows.
-- Quantify scale or results only when the number is explicitly supported or the user confirms it.
+- Give a recent or material role two to four separate bullets, and give an older or secondary role one or two. Give a selected project one or two separate bullets. Never merge several responsibilities into a single run-on paragraph merely to save space.
+- Begin each bullet with a precise action verb and express `action + context + outcome` where evidence allows. Keep it concise enough to scan, usually one to two rendered lines.
+- Quantify scale or results only when the number is explicitly supported or the user confirms it. When no number is known, use verified scope, artifact, method, audience, tool, decision, or deliverable; a strong truthful bullet does not require a made-up metric.
 - Prioritize achievements and responsibilities that map to the target role; remove or compress weakly related material rather than deleting evidence needed to understand the career history.
 - Use present tense for current work and past tense for completed work, consistently.
 - Avoid dense paragraphs, vague claims, duplicated bullets, unexplained internal jargon, and statements such as “responsible for” when a precise action is known.
@@ -87,6 +101,7 @@ Use these defaults unless the employer or user has a specific documented require
 - No tables for layout, multi-column core sections, sidebars, text boxes, floating shapes, photos, charts, background graphics, rating bars, WordArt, or essential information encoded only as an image.
 - Align dates with paragraph tab stops or a stable single-column text layout, not a table or floating container.
 - Do not shrink type or margins below readable limits to force one page. Early-career resumes should usually be one page; use two pages when relevant verified content genuinely warrants it.
+- Do not accept a large empty lower section of a one-page CV when additional verified evidence exists. Restore the highest-value `Support` bullets, projects, certifications, or relevant skills before increasing whitespace. Never pad a page with inflated spacing, decorative elements, repetition, or filler.
 
 ## FlowCV-inspired presentation
 
@@ -116,7 +131,7 @@ Read [docx-cv-output.md](docx-cv-output.md) before creating the DOCX. It defines
 
 Do not call a CV finished merely because it exported successfully.
 
-1. Render every page and visually inspect clipping, overlaps, orphaned headings, broken bullets, crowded regions, inconsistent dates, unexpected blank pages, and unreadably small text.
+1. Render every page and visually inspect clipping, overlaps, orphaned headings, broken bullets, crowded regions, inconsistent dates, unexpected blank pages, unreadably small text, and large unused lower-page areas. When verified evidence remains available, rebalance content before approving the page.
 2. Extract text from the final PDF or DOCX in reading order. Verify that the name, contact text, headings, organizations, titles, dates, bullets, skills, and URLs appear in a logical sequence.
 3. Confirm that the file is searchable/selectable text, not a page image, and that essential links display readable labels.
 4. Compare every claim and metric against the role-to-evidence matrix and source documents. Remove or flag anything unsupported.
@@ -124,7 +139,8 @@ Do not call a CV finished merely because it exported successfully.
 6. Check page size, page count, filename, accepted type, and reasonable file size for the target system.
 7. For DOCX, verify that every professional URL and contact link uses a true external hyperlink relationship and opens the verified target; for exported PDF, verify that the links remain active when the export is intended for submission.
 8. If an ATS-simulation or parsing checker is available, treat it as an additional heuristic only. Report the actual checks performed; never invent an ATS score or promise that a resume will pass.
-9. Present the generated files and a concise change summary to the user for review. Never upload a newly generated CV until the user has chosen that option and the document has passed these checks.
+9. Confirm the tailoring plan preserved the candidate's material supporting strengths rather than reducing the CV to a narrow job-keyword list.
+10. Present the generated files and a concise change summary to the user for review. Never upload a newly generated CV until the user has chosen that option and the document has passed these checks.
 
 ## Research basis
 
